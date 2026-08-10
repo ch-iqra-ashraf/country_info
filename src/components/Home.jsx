@@ -65,31 +65,31 @@ const Home = () => {
             </h3>
           </div>
 
-          <div className="flex items-center justify-between px-2 sm:px-5 mt-14 sm:mt-24">
+          <div className="flex items-center justify-between px-2 text-[8px] sm:px-5 mt-14 sm:mt-24">
             {/* Region Section */}
             <div className="">
-              <p className="text-sm sm:text-2xl pr-3 -mt-1">{countryData?.region}</p>
+              <p className="text-[8px] sm:text-2xl pr-3 -mt-1">{countryData?.region}</p>
               <p className="text-xs sm:text-base">Region</p>
             </div>
 
             {/* Currency Section */}
             <div className="">
-              <p className="text-sm sm:text-2xl -mt-1">
+              <p className="text-[8px] sm:text-2xl -mt-1">
                 {" "}
                 {countryData?.currencies?.[0]?.name}{" "}
               </p>
-              <p className="text-sm sm:text-base">Currency</p>
+              <p className="text-xs sm:text-base">Currency</p>
             </div>
 
             {/* Language Section */}
             <div className="">
-              <span className="text-sm sm:text-2xl -mt-1">
+              <span className="text-[8px] inline-block sm:text-2xl -mt-1">
                 {countryData?.languages?.[0]?.name}
               </span>
-              <span className="text-sm sm:text-2xl -mt-1">
+              <span className="text-[8px] inline-block sm:text-2xl -mt-1">
                 {countryData?.languages?.[1]?.name}
               </span>
-              <p className="text-sm sm:text-base">Language</p>
+              <p className="text-xs sm:text-base">Language</p>
             </div>
           </div>
         </div>
