@@ -1,5 +1,5 @@
 import React from "react";
-import MapComponent from "./map";
+import MapComponent from "./Map";
 
 export default function ModalCountryData({ country }) {
   if (!country) return null;
