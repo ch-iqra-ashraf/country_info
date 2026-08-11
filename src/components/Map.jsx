@@ -24,7 +24,8 @@ function ChangeView({ center }) {
 
 const MapComponent = ({ center }) => {
   // Default to [0, 0] if coordinates haven't loaded yet
-const mapCenter = center && center.length === 2 ? center : [51.505, -0.09];
+const mapCenter = center && center.length === 2 ? center : [];
+
 
 
 
