@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { getCountryByName, getRandomCountry } from "../util/service";
 import Navbar from "./Navbar";
+import { CountryDataModal } from "./ModalCountry";
 
 const Home = () => {
   const [country, setCountry] = useState("");
   const [countryList, setCountryList] = useState([]);
   const [loader, setLoading] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const checkInfo = async (name) => {
     setLoading(true);
@@ -20,6 +23,7 @@ const Home = () => {
     });
   };
 
+  
   useEffect(() => {
     const loadRandomCountries = async () => {
       setLoading(true);
@@ -39,6 +43,10 @@ const Home = () => {
     loadRandomCountries();
   }, []);
 
+  const handleOpen = (country) => {
+  setSelectedCountry(country);
+  setIsOpen(true);
+};
   return (
     <>
       <Navbar country={country} setCountry={setCountry} checkInfo={checkInfo} />
@@ -95,7 +103,7 @@ const Home = () => {
                   <p className="text-[6px] sm:text-[8px]">Language</p>
                 </div>
               </div>
-              <button className="text-[6px] sm:text-[8px] border border-amber-50 rounded-3xl px-3 hover:bg-[#B5482A]" >View Details</button>
+           <CountryDataModal country={countryData} />
             </div>
           ))}
         </div>

@@ -10,6 +10,8 @@ export const getCountryByName = async (countryName) => {
 export const getRandomCountry = async () => {
     
         const response = await axios.get(`${randomURL}`);
+        // console.log(re sponse.data);
         return response.data;
+
     
 };
