@@ -6,9 +6,9 @@ import "leaflet/dist/leaflet.css";
 // Fix for default marker icon asset issue
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: "https://cloudflare.com",
-  iconUrl: "https://cloudflare.com",
-  shadowUrl: "https://cloudflare.com",
+  iconRetinaUrl: "https://leafletjs.com/examples/custom-icons/leaf-green.png",
+  iconUrl: "https://leafletjs.com/examples/custom-icons/leaf-green.png",
+  shadowUrl: "https://leafletjs.com/examples/custom-icons/leaf-green.png",
 });
 
 // Helper component to smoothly animate and fly the map view to the new coordinates
