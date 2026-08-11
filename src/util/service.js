@@ -1,5 +1,5 @@
 import axios from "axios";
-import { byNameURL } from "./config";
+import { byNameURL, randomURL } from "./config";
 
 export const getCountryByName = async (countryName) => {
 
@@ -7,3 +7,9 @@ export const getCountryByName = async (countryName) => {
     return response.data;
 };
 
+export const getRandomCountry = async () => {
+    
+        const response = await axios.get(`${randomURL}`);
+        return response.data;
+    
+};

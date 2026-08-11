@@ -2,4 +2,7 @@
 
 export const byNameURL = BASEURL + "/name/"
 
+export const randomURL = BASEURL + "/random";
+
+
 
